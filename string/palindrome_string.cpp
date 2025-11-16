@@ -1,0 +1,18 @@
+// Check given string is palindrome or not
+
+#include <iostream>
+#include <string>
+using namespace std;
+bool isPalindrome(const string& str) {
+    int left = 0;
+    int right = str.length() - 1;
+    while (left < right) {
+        if (str[left] != str[right]) {
+            return false; // Mismatch found, not a palindrome
+        }
+        left++;
+        right--;
+    }
+    return true; // No mismatches, it's a palindrome
+    // Time Complexity: O(N)
+}
